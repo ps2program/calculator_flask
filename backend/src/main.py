@@ -46,8 +46,8 @@ def division():
     result = divide(x, y)
     return jsonify({"result": result})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
 
 
 # Now, when you run this Flask application, you can access the routes:
