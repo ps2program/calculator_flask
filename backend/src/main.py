@@ -3,20 +3,10 @@ from calculator.add import add
 from calculator.subtract import subtract
 from calculator.multiply import multiply
 from calculator.divide import divide
-
-# CORS
-from flask import Flask
 from flask_cors import CORS
 
-# app = Flask(__name__)
-# CORS(app)
-
-# aliter
 app = Flask(__name__)
 CORS(app, origins='http://localhost:3000')
-
-
-app = Flask(__name__)
 
 @app.route('/add', methods=['GET'])
 def addition():
@@ -45,6 +35,7 @@ def division():
     y = int(request.args.get('y', 1))  # Avoid division by zero
     result = divide(x, y)
     return jsonify({"result": result})
+
 
 # if __name__ == '__main__':
 #     app.run(debug=True)
